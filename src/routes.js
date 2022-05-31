@@ -1,5 +1,5 @@
 const {
-    addBookHandler, getAllBooksHandler, getBookHandler, updateBookHandler,
+    addBookHandler, getAllBooksHandler, getBookHandler, updateBookHandler, deleteBookHandler,
 } = require('./handler');
 
 // Endpoint API
@@ -30,6 +30,13 @@ const routes = [
         method: 'PUT',
         path: '/books/{bookId}',
         handler: updateBookHandler,
+    },
+
+    // Menghapus data book
+    {
+        method: 'DELETE',
+        path: '/books/{bookId}',
+        handler: deleteBookHandler,
     },
 ];
 
